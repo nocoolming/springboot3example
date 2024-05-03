@@ -1,4 +1,4 @@
-package org.ming.demo;
+package org.ming.demo.api;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -10,7 +10,7 @@ public class HomeController {
         return "Hello World!";
     }
 
-     @GetMapping("{message}")
+     @GetMapping("/hello/{message}")
     String home(@PathVariable String message) {
         return "Hello " + message;
     }

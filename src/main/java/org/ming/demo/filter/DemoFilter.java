@@ -15,7 +15,7 @@ public class DemoFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         log.info("DemoFilter");
-        throw new RuntimeException("haha");
-//        filterChain.doFilter(servletRequest, servletResponse);
+//        throw new RuntimeException("haha");
+        filterChain.doFilter(servletRequest, servletResponse);
     }
 }

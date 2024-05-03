@@ -1,4 +1,4 @@
-package org.ming.demo;
+package org.ming.demo.api;
 
 
 import org.slf4j.Logger;
