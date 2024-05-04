@@ -2,5 +2,5 @@ server:
   port: 8080
 
 upload:
-  path: f:\upload
-  extensions: jpg|gif|webp|png|jpeg
+  path: d:\upload
+  extensions: jpg|png

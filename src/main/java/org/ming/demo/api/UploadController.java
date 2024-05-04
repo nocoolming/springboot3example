@@ -1,6 +1,5 @@
 package org.ming.demo.api;
 
-
 import org.ming.demo.config.UploadConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,18 +20,14 @@ import java.util.Map;
 @RestController
 public class UploadController {
     private static final Logger log = LoggerFactory.getLogger(UploadController.class);
-
     private final Path root = Paths.get("d:\\uploads");
-
     @Autowired
     UploadConfig uploadConfig;
 
     @PostMapping("upload")
     String upload(@RequestParam("file") MultipartFile file) {
         try {
-            Files.copy(file.getInputStream(),
-                    this.root.resolve(file.getOriginalFilename()));
-
+            Files.copy(file.getInputStream(), this.root.resolve(file.getOriginalFilename()));
             return "success";
         } catch (IOException e) {
             log.error(e.getMessage());
@@ -45,7 +40,6 @@ public class UploadController {
         Map<String, String> map = new HashMap<>();
         map.put("path", uploadConfig.getPath());
         map.put("extensions", uploadConfig.getExtensions());
-
         return map;
     }
 }
