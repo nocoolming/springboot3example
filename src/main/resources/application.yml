@@ -1,7 +1,6 @@
 server:
   port: 8080
 
-
 upload:
-  path: /Users/yangyang/Desktop/upload
+  path: f:\upload
   extensions: jpg|gif|webp|png|jpeg
